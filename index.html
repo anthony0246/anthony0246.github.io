@@ -16,7 +16,7 @@
             padding-top: 1.5%;
             margin: 2rem 4rem;
             padding: 2rem;
-            background-color: f4f3ee;
+            background-color: #f4f3ee;
         }
 
         p {
@@ -40,13 +40,21 @@
             cursor: pointer;
         }
 
+        img {
+            min-width: 70px;
+        }
+
+        .card-min-size {
+            min-width: 200px;
+        }
+
     </style>
 
 </head>
 
-<body style="background-color: 463f3a;">
+<body style="background-color: #463f3a;">
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: 8a817c">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #8a817c">
         <div class="container-fluid nav-margin">
             <a class="navbar-brand" href="#">Anthony Alam - Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,7 +94,7 @@
 
         <div class="container-fluid row justify-content-center align-items-center d-flex align-items-stretch pt-3">
             
-            <div class="col-xl-5 col-md-8 d-flex align-items-center text-div pb-xlg-0 pb-lg-3 pb-md-3 pb-sm-3">
+            <div class="col-xl-5 col-md-8 d-flex align-items-center text-div pb-xlg-0 pb-3 card-min-size">
                 <p class="">Hello, I am Anthony!<br><br>
 
                     I'm studying Software Engineering at the University of Ottawa and I have interned twice at Cisco as a software engineer.<br><br>
@@ -127,7 +135,7 @@
 
         </div>
 
-        <p class="my-4">Although I don't have much experience in designing user interfaces (UI), I am currently attending a course dedicated to this subject and learning a lot from the <a href="https://www.nngroup.com/">Nielsen and Norman Group</a>.</p>
+        <p class="mt-4">Although I don't have much experience in designing user interfaces (UI), I am currently attending a course dedicated to this subject and learning a lot from the <a href="https://www.nngroup.com/">Nielsen and Norman Group</a>.</p>
 
     </section>
 
@@ -163,28 +171,28 @@
         <div class="container-fluid row my-5 justify-content-center gap-4">
 
                 <!-- Services Card -->
-                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer" onclick="redirectToProgressPage()">
+                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer card-min-size" onclick="redirectToProgressPage()">
                     <h3 class="text-center display-6">Services Site</h3>
                     <p>This is a mock description for the service site.</p>
                     <img class="img-fluid w-50 h-auto" src="assets/phone-repair-image.png">
                 </div>
 
                 <!-- Game Card -->
-                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer" onclick="redirectToProgressPage()">
+                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer card-min-size" onclick="redirectToProgressPage()">
                     <h3 class="text-center display-6 mb-0">Game</h3>
                     <p>This is a mock description for the game site.</p>
                     <img class="img-fluid w-50 h-auto" src="assets/tic-tac-toe-image.png">
                 </div>
 
                 <!-- E-Commerce Site Card -->
-                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer" onclick="redirectToProgressPage()">
+                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer card-min-size" onclick="redirectToProgressPage()">
                     <h3 class="text-center display-6">E-Commerce Site</h3>
                     <p>This is a mock description for the e-commerce site.</p>
                     <img class="img-fluid w-50 h-auto" src="assets/e-commerce-image.png">
                 </div>
 
                 <!-- Analysis and Visualization Card -->
-                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer" onclick="redirectToProgressPage()">
+                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer card-min-size" onclick="redirectToProgressPage()">
                     <h3 class="text-center display-6">Analysis and Visualization</h3>
                     <p>This is a mock description for the analysis and visualization site.</p>
                     <img class="img-fluid w-50 h-auto" src="assets/graph-image.png">
@@ -197,14 +205,14 @@
 
         <div class="container-fluid row justify-content-center gap-4">
             <!-- Email Card -->
-            <div class="col-xl-3 col-lg-5 col-sm-11 p-4 border rounded-3 shadow-sm bg-light text-center d-flex flex-column align-items-center">
+            <div class="col-xl-3 col-lg-5 col-sm-11 p-4 border rounded-3 shadow-sm bg-light text-center d-flex flex-column align-items-center card-min-size">
                 <img class="img-fluid" src="assets/email-image.png" alt="Email Icon" style="width: 20%;">
                 <h2 class="h5 mt-2 display-6">Email</h2>
                 <p class="text-muted">anthonyalamswe@gmail.com</p>
             </div>
 
             <!-- LinkedIn Card -->
-            <div class="col-xl-3 col-lg-5 col-sm-11 p-4 border rounded-3 shadow-sm bg-light text-center d-flex flex-column align-items-center">
+            <div class="col-xl-3 col-lg-5 col-sm-11 p-4 border rounded-3 shadow-sm bg-light text-center d-flex flex-column align-items-center card-min-size">
                 <img class="img-fluid" src="assets/linkedin-image.png" alt="LinkedIn Icon" style="width: 20%;">
                 <h2 class="h5 mt-2 display-6">LinkedIn</h2>
                 <a href="https://www.linkedin.com/in/anthonyalamswe/" class="text-muted" target="_blank">
@@ -213,7 +221,7 @@
             </div>
 
             <!-- Phone Card -->
-            <div class="col-xl-3 col-lg-5 col-sm-11 p-4 border rounded-3 shadow-sm bg-light text-center d-flex flex-column align-items-center">
+            <div class="col-xl-3 col-lg-5 col-sm-11 p-4 border rounded-3 shadow-sm bg-light text-center d-flex flex-column align-items-center card-min-size">
                 <img class="img-fluid" src="assets/phone-logo.png" alt="Phone Icon" style="width: 20%;">
                 <h2 class="h5 mt-2 display-6">Mobile Phone</h2>
                 <p class="text-muted margin-bottom: 0">(613) 869-1334 (+1 - Canada)</p>
