@@ -36,6 +36,10 @@
             align-items: center; /* Vertically centers the <p> */
         }
 
+        .card-pointer {
+            cursor: pointer;
+        }
+
     </style>
 
 </head>
@@ -123,6 +127,8 @@
 
         </div>
 
+        <p class="my-4">Although I don't have much experience in designing user interfaces (UI), I am currently attending a course dedicated to this subject and learning a lot from the <a href="https://www.nngroup.com/">Nielsen and Norman Group</a>.</p>
+
     </section>
 
 
@@ -157,28 +163,28 @@
         <div class="container-fluid row my-5 justify-content-center gap-4">
 
                 <!-- Services Card -->
-                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3">
+                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer" onclick="redirectToProgressPage()">
                     <h3 class="text-center display-6">Services Site</h3>
                     <p>This is a mock description for the service site.</p>
                     <img class="img-fluid w-50 h-auto" src="assets/phone-repair-image.png">
                 </div>
 
                 <!-- Game Card -->
-                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3">
+                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer" onclick="redirectToProgressPage()">
                     <h3 class="text-center display-6 mb-0">Game</h3>
                     <p>This is a mock description for the game site.</p>
                     <img class="img-fluid w-50 h-auto" src="assets/tic-tac-toe-image.png">
                 </div>
 
                 <!-- E-Commerce Site Card -->
-                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3">
+                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer" onclick="redirectToProgressPage()">
                     <h3 class="text-center display-6">E-Commerce Site</h3>
                     <p>This is a mock description for the e-commerce site.</p>
                     <img class="img-fluid w-50 h-auto" src="assets/e-commerce-image.png">
                 </div>
 
                 <!-- Analysis and Visualization Card -->
-                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3">
+                <div class="col-xl-2 col-lg-5 col-sm-11 m-2 p-3 border rounded-3 bg-light shadow-lg d-flex flex-column align-items-center justify-content-center gap-3 card-pointer" onclick="redirectToProgressPage()">
                     <h3 class="text-center display-6">Analysis and Visualization</h3>
                     <p>This is a mock description for the analysis and visualization site.</p>
                     <img class="img-fluid w-50 h-auto" src="assets/graph-image.png">
@@ -217,6 +223,14 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script>
+
+    function redirectToProgressPage() {
+        window.location.href = 'inprogress.html';
+    }
+
+</script>
 
 </body>
 
