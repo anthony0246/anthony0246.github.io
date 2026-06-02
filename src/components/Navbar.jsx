@@ -53,7 +53,7 @@ export default function Navbar({ activeSection }) {
             )
           })}
           <a
-            href="/assets/ANTHONY_ALAM_RESUME.pdf"
+            href="/assets/ANTHONY_M_ALAM_RESUME.pdf"
             download
             className="ml-3 px-3 py-1.5 font-mono text-sm border border-accent text-accent rounded hover:bg-accent/10 transition-colors duration-200"
           >
@@ -90,7 +90,7 @@ export default function Navbar({ activeSection }) {
             )
           })}
           <a
-            href="/assets/ANTHONY_ALAM_RESUME.pdf"
+            href="/assets/ANTHONY_M_ALAM_RESUME.pdf"
             download
             className="mt-2 py-2 font-mono text-sm text-accent border-t border-border"
             onClick={() => setMenuOpen(false)}

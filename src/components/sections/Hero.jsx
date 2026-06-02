@@ -55,7 +55,7 @@ export default function Hero() {
             View Work
           </button>
           <a
-            href="/assets/ANTHONY_ALAM_RESUME.pdf"
+            href="/assets/ANTHONY_M_ALAM_RESUME.pdf"
             download
             className="px-5 py-2.5 border border-accent text-accent font-mono font-bold text-sm rounded hover:bg-accent/10 transition-colors duration-200"
           >

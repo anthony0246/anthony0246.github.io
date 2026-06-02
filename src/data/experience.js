@@ -3,8 +3,8 @@ export const experiences = [
     id: 'cisco-incoming',
     company: 'Cisco Systems',
     shortName: 'Cisco',
-    role: 'Software Engineer Intern — Telemetry & Observability',
-    duration: 'Summer 2026 · Present',
+    role: 'Software Engineer Intern — Telemetry & Programmability',
+    duration: 'May 2026 · Present',
     location: 'Ottawa, ON',
     logo: '/assets/cisco-logo.png',
     bullets: [
