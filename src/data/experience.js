@@ -4,7 +4,7 @@ export const experiences = [
     company: 'Cisco Systems',
     shortName: 'Cisco',
     role: 'Software Engineer Intern — Telemetry & Observability',
-    duration: 'Summer 2026 · Incoming',
+    duration: 'Summer 2026 · Present',
     location: 'Ottawa, ON',
     logo: '/assets/cisco-logo.png',
     bullets: [
@@ -12,7 +12,7 @@ export const experiences = [
       'Building on model-driven programmability foundations: YANG, gNXI, NETCONF, and RESTCONF.',
     ],
     tags: ['AI', 'Agentic Systems', 'YANG', 'gNXI', 'NETCONF', 'Distributed Systems'],
-    incoming: true,
+    current: true,
   },
   {
     id: 'ford',
@@ -21,13 +21,13 @@ export const experiences = [
     role: 'Software Developer Intern',
     duration: 'Sep – Dec 2025',
     location: 'Ottawa, ON',
-    logo: null,
+    logo: '/assets/ford-logo.svg',
     bullets: [
       'Spearheaded development of a C++ SOA proxy service feature enabling hotspot credential read/write operations across 400,000+ next-generation Ford and Lincoln vehicles.',
       'Developed a custom parser using regular expressions to identify Wi-Fi service failures across millions of lines of ADB device logs, enhancing efficiency by 24% over the previous implementation.',
     ],
     tags: ['C++', 'SOA', 'Automotive', 'Regex', 'Embedded Systems'],
-    incoming: false,
+    current: false,
   },
   {
     id: 'cisco-iosxe',
@@ -44,7 +44,7 @@ export const experiences = [
       'Designed automated pre-commit routines with Python (pyATS) and YAML, covering all known edge cases and eliminating a 2-hour manual upgrade/downgrade process for Cisco Catalyst HA switches.',
     ],
     tags: ['Python', 'Flask', 'C', 'DAG', 'pyATS', 'SQLite', 'YAML'],
-    incoming: false,
+    current: false,
   },
   {
     id: 'cisco-iosxr',
@@ -60,6 +60,6 @@ export const experiences = [
       'Upgraded defect detection and long-term maintainability of 100+ C files by integrating ASan and Valgrind analyses into nightly sanity runs.',
     ],
     tags: ['Python', 'pyATS', 'C', 'Cmocka', 'gRPC', 'gNMI', 'Valgrind', 'ASan'],
-    incoming: false,
+    current: false,
   },
 ]

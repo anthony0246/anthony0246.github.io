@@ -40,7 +40,7 @@ export default function Experience() {
                 <FordLogo />
               )}
               <span className="font-mono text-xs">{exp.shortName}</span>
-              {exp.incoming && (
+              {exp.current && (
                 <span className="ml-auto text-xs px-1 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded font-mono">
                   ↑
                 </span>
@@ -63,9 +63,9 @@ export default function Experience() {
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-1">
                   <h3 className="font-mono text-lg text-primary font-bold">{active.role}</h3>
-                  {active.incoming && (
+                  {active.current && (
                     <span className="text-xs px-2 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded-full font-mono">
-                      Incoming
+                      Present
                     </span>
                   )}
                 </div>
