@@ -34,7 +34,7 @@ export default function Hero() {
           <span className="text-accent">$</span> whoami
         </motion.p>
 
-        <motion.h1 variants={item} className="font-mono text-4xl md:text-6xl font-bold text-primary leading-tight">
+        <motion.h1 variants={item} className="font-mono text-3xl sm:text-4xl md:text-6xl font-bold text-primary leading-tight">
           Anthony Alam
         </motion.h1>
 
@@ -43,8 +43,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.p variants={item} className="font-sans text-muted text-base md:text-lg leading-relaxed max-w-xl">
-          Shipping production-grade software across networks, vehicles, and AI —{' '}
-          <span className="text-primary">powered by a 3.96 GPA.</span>
+          Building backend systems that run on Cisco's global networking infrastructure and 400,000+ Ford vehicles.
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap gap-4 pt-2">

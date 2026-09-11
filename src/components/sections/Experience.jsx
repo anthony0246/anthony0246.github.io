@@ -22,13 +22,13 @@ export default function Experience() {
 
       <div className="flex flex-col md:flex-row gap-0 border border-border rounded-lg overflow-hidden">
         {/* Tab list */}
-        <div className="md:w-52 flex md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-r border-border flex-shrink-0">
+        <div className="md:w-52 flex md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-r border-border flex-shrink-0 scrollbar-none">
           {experiences.map((exp) => (
             <button
               key={exp.id}
               onClick={() => setActiveId(exp.id)}
               className={`
-                flex items-center gap-2 px-4 py-4 text-left transition-colors duration-150 whitespace-nowrap md:whitespace-normal
+                flex items-center gap-2 px-4 py-3 md:py-4 text-left transition-colors duration-150 whitespace-nowrap md:whitespace-normal flex-shrink-0
                 ${activeId === exp.id
                   ? 'border-b-2 md:border-b-0 md:border-l-2 border-accent bg-surface/60 text-accent'
                   : 'border-b-2 md:border-b-0 md:border-l-2 border-transparent text-muted hover:bg-surface/40 hover:text-primary'}

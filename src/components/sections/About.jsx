@@ -8,7 +8,7 @@ export default function About() {
 
       <div className="flex flex-col lg:flex-row gap-12 items-start">
         <motion.div
-          className="flex-shrink-0"
+          className="flex-shrink-0 flex justify-center lg:justify-start w-full lg:w-auto"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -17,7 +17,7 @@ export default function About() {
           <img
             src="/assets/my_image.jpg"
             alt="Anthony Alam"
-            className="w-52 h-52 object-cover rounded-lg border border-border"
+            className="w-44 h-44 sm:w-52 sm:h-52 object-cover rounded-lg border border-border"
           />
         </motion.div>
 
@@ -31,14 +31,14 @@ export default function About() {
           <div className="font-sans text-muted text-base leading-relaxed space-y-4">
             <p>
               I'm a Software Engineering student at the University of Ottawa with a 3.96 GPA, driven by
-              a passion for building systems that operate at scale — from network routing infrastructure to
+              a passion for building systems that operate at scale: from network routing infrastructure to
               connected vehicle platforms and AI-powered tools.
             </p>
             <p>
-              I've completed three engineering internships at{' '}
+              I've completed four engineering internships, three at{' '}
               <span className="text-primary">Cisco Systems</span> and one at{' '}
               <span className="text-primary">Ford Motor Company</span>, working across IOS XE/XR networking,
-              C++ embedded service development, and AI/observability automation. I love Backend and
+              telemetry observability, C++ embedded service development, and test automation. I love Backend and
               Infrastructure Development and thrive where precision and performance matter most.
             </p>
             <p>

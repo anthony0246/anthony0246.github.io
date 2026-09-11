@@ -27,3 +27,11 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #58a6ff;
 }
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

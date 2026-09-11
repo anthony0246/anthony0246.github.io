@@ -41,10 +41,9 @@ export default function Contact() {
       <SectionHeader label="contact" />
 
       <div className="max-w-xl">
-        <p className="font-mono text-2xl text-accent font-bold mb-2">Let's build something.</p>
+        <p className="font-mono text-2xl text-accent font-bold mb-2">Open to new opportunities.</p>
         <p className="font-sans text-muted text-sm mb-10 leading-relaxed">
-          I'm always open to new opportunities, collaborations, or just a good conversation about software.
-          Feel free to reach out through any of the channels below.
+          I'm actively exploring software engineering roles. If my background looks like a fit, reach out. I'm always happy to chat.
         </p>
 
         <div className="flex flex-col gap-3">
@@ -63,9 +62,9 @@ export default function Contact() {
               <span className="text-muted group-hover:text-accent transition-colors duration-200">
                 {link.icon}
               </span>
-              <div className="flex flex-col">
+              <div className="flex flex-col min-w-0">
                 <span className="font-mono text-xs text-muted uppercase tracking-widest">{link.label}</span>
-                <span className="font-mono text-sm text-primary group-hover:text-accent transition-colors duration-200">
+                <span className="font-mono text-xs sm:text-sm text-primary group-hover:text-accent transition-colors duration-200 truncate">
                   {link.value}
                 </span>
               </div>
