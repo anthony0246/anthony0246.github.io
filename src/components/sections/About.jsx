@@ -3,7 +3,7 @@ import SectionHeader from '../ui/SectionHeader'
 
 export default function About() {
   return (
-    <section id="about" className="max-w-5xl mx-auto px-6 py-24 scroll-mt-14">
+    <section id="about" className="max-w-5xl mx-auto px-6 py-16 scroll-mt-14">
       <SectionHeader label="about" />
 
       <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -41,10 +41,6 @@ export default function About() {
               telemetry observability, C++ embedded service development, and test automation. I love Backend and
               Infrastructure Development and thrive where precision and performance matter most.
             </p>
-            <p>
-              Outside of work, I enjoy building side projects, grinding coding problems on GitHub, and
-              exploring how AI can be applied to real-world accessibility challenges.
-            </p>
           </div>
 
           <div className="bg-surface border border-border rounded-lg p-5 font-mono">
@@ -52,7 +48,7 @@ export default function About() {
             <p className="text-primary font-semibold text-sm">University of Ottawa</p>
             <p className="text-muted text-sm">BASc Software Engineering</p>
             <div className="flex flex-wrap gap-4 mt-3 text-xs">
-              <span className="text-muted">GPA: <span className="text-accent font-bold">3.96 / 4.0</span></span>
+              <span className="text-muted">GPA: <span className="text-accent font-bold">3.96 / 4.00</span></span>
               <span className="text-muted">Expected: <span className="text-primary">Dec 2027</span></span>
               <span className="text-muted">Ottawa, ON</span>
             </div>

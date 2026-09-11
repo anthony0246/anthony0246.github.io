@@ -48,10 +48,10 @@ export default function Hero() {
 
         <motion.div variants={item} className="flex flex-wrap gap-4 pt-2">
           <button
-            onClick={() => scrollTo('projects')}
+            onClick={() => scrollTo('experience')}
             className="px-5 py-2.5 bg-accent text-background font-mono font-bold text-sm rounded hover:bg-accent/90 transition-colors duration-200"
           >
-            View Work
+            View Experience
           </button>
           <a
             href="/assets/ANTHONY_M_ALAM_RESUME.pdf"

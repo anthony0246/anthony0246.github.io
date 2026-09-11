@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import SectionHeader from '../ui/SectionHeader'
 
@@ -36,8 +37,20 @@ const links = [
 ]
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false)
+
+  const handleEmailClick = async (e) => {
+    try {
+      await navigator.clipboard.writeText('anthonyalamswe@gmail.com')
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // clipboard unavailable; let the mailto: link handle it
+    }
+  }
+
   return (
-    <section id="contact" className="max-w-5xl mx-auto px-6 py-24 scroll-mt-14">
+    <section id="contact" className="max-w-5xl mx-auto px-6 py-16 scroll-mt-14">
       <SectionHeader label="contact" />
 
       <div className="max-w-xl">
@@ -53,6 +66,7 @@ export default function Contact() {
               href={link.href}
               target={link.href.startsWith('mailto') ? undefined : '_blank'}
               rel="noopener noreferrer"
+              onClick={link.href.startsWith('mailto') ? handleEmailClick : undefined}
               className="flex items-center gap-4 px-5 py-4 border border-border rounded-lg bg-surface hover:border-accent group transition-colors duration-200"
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -68,23 +82,22 @@ export default function Contact() {
                   {link.value}
                 </span>
               </div>
-              <svg
-                className="ml-auto text-muted group-hover:text-accent transition-colors duration-200"
-                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
+              {link.href.startsWith('mailto') && copied ? (
+                <span className="ml-auto font-mono text-xs text-accent">Copied!</span>
+              ) : (
+                <svg
+                  className="ml-auto text-muted group-hover:text-accent transition-colors duration-200"
+                  width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              )}
             </motion.a>
           ))}
         </div>
       </div>
 
-      <footer className="mt-20 pt-8 border-t border-border">
-        <p className="font-mono text-xs text-muted text-center">
-          Built with React + Vite · Deployed on GitHub Pages
-        </p>
-      </footer>
     </section>
   )
 }

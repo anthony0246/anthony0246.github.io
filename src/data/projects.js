@@ -14,16 +14,17 @@ export const projects = [
   },
   {
     id: 'playitagain',
-    title: 'PlayItAgain',
+    title: 'PlayItAgain: Kolonie',
     subtitle: 'Catan Game Save · iOS App',
     description:
-      'An iOS app that digitizes physical Catan boards, cards, and game state from a single photo — allowing players to save and resume games across sessions. Features a Core Image perspective-correction pipeline and an on-device YOLOv8 + Core ML detector to recognize terrains, number tokens, and player pieces.',
+      'A shipped iOS app that digitizes physical Catan boards and game state from a single photo, letting players save and resume games anytime. Engineered a Core Image perspective-correction pipeline and an on-device YOLOv8 + Core ML detector, achieving 98% board detection accuracy.',
     tags: ['Swift', 'SwiftUI', 'YOLOv8', 'Core ML', 'Core Image', 'Computer Vision'],
-    badge: 'In Development',
+    badge: null,
     links: {
       github: null,
       live: null,
+      support: 'https://playitagain-kolonie.netlify.app/',
     },
-    stayTuned: true,
+    stayTuned: false,
   },
 ]

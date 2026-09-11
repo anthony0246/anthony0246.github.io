@@ -15,7 +15,7 @@ const badgeVariants = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-5xl mx-auto px-6 py-24 scroll-mt-14">
+    <section id="skills" className="max-w-5xl mx-auto px-6 py-16 scroll-mt-14">
       <SectionHeader label="skills" />
 
       <div className="flex flex-col gap-10">

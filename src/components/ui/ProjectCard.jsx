@@ -7,6 +7,14 @@ const GitHubIcon = () => (
   </svg>
 )
 
+const SupportIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+    <line x1="12" y1="17" x2="12.01" y2="17"/>
+  </svg>
+)
+
 const ExternalIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
@@ -71,6 +79,17 @@ export default function ProjectCard({ project, index }) {
               >
                 <ExternalIcon />
                 <span>Live Demo</span>
+              </a>
+            )}
+            {project.links.support && (
+              <a
+                href={project.links.support}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-muted hover:text-accent transition-colors duration-200 font-mono text-sm"
+              >
+                <SupportIcon />
+                <span>Support Page</span>
               </a>
             )}
           </>

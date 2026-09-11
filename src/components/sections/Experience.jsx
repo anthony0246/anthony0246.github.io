@@ -17,7 +17,7 @@ export default function Experience() {
   const active = experiences.find((e) => e.id === activeId)
 
   return (
-    <section id="experience" className="max-w-5xl mx-auto px-6 py-24 scroll-mt-14">
+    <section id="experience" className="max-w-5xl mx-auto px-6 py-16 scroll-mt-14">
       <SectionHeader label="experience" />
 
       <div className="flex flex-col md:flex-row gap-0 border border-border rounded-lg overflow-hidden">
