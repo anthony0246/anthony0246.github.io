@@ -23,6 +23,7 @@ export const projects = [
     links: {
       github: null,
       live: null,
+      appStore: 'https://apps.apple.com/app/playitagain-kolonie/id6809600981',
       support: 'https://playitagain-kolonie.netlify.app/',
     },
     stayTuned: false,
