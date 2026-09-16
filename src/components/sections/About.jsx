@@ -14,11 +14,14 @@ export default function About() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <img
-            src="/assets/my_image.jpg"
-            alt="Anthony Alam"
-            className="w-44 h-44 sm:w-52 sm:h-52 object-cover rounded-lg border border-border"
-          />
+          <div className="relative">
+            <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-accent/30 to-amber-badge/20 blur-2xl" aria-hidden="true" />
+            <img
+              src="/assets/my_image.jpg"
+              alt="Anthony Alam"
+              className="relative w-44 h-44 sm:w-52 sm:h-52 object-cover rounded-2xl border border-border shadow-2xl shadow-black/40"
+            />
+          </div>
         </motion.div>
 
         <motion.div
@@ -36,17 +39,17 @@ export default function About() {
             </p>
             <p>
               I've completed four engineering internships, three at{' '}
-              <span className="text-primary">Cisco Systems</span> and one at{' '}
-              <span className="text-primary">Ford Motor Company</span>, working across IOS XE/XR networking,
+              <span className="text-accent font-semibold">Cisco Systems</span> and one at{' '}
+              <span className="text-accent font-semibold">Ford Motor Company</span>, working across IOS XE/XR networking,
               telemetry observability, C++ embedded service development, and test automation. I love Backend and
               Infrastructure Development and thrive where precision and performance matter most.
             </p>
           </div>
 
-          <div className="bg-surface border border-border rounded-lg p-5 font-mono">
+          <div className="bg-surface/50 backdrop-blur-sm border border-border rounded-xl p-5 font-mono shadow-lg shadow-black/20">
             <p className="text-accent text-xs mb-3 uppercase tracking-widest">education</p>
-            <p className="text-primary font-semibold text-sm">University of Ottawa</p>
-            <p className="text-muted text-sm">BASc Software Engineering</p>
+            <p className="font-sans text-primary font-semibold text-sm">University of Ottawa</p>
+            <p className="font-sans text-muted text-sm">BASc Software Engineering</p>
             <div className="flex flex-wrap gap-4 mt-3 text-xs">
               <span className="text-muted">GPA: <span className="text-accent font-bold">3.96 / 4.00</span></span>
               <span className="text-muted">Expected: <span className="text-primary">Dec 2027</span></span>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
@@ -26,7 +27,7 @@ export default function Navbar({ activeSection }) {
         <a
           href="#hero"
           onClick={(e) => { e.preventDefault(); document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' }) }}
-          className="font-mono text-accent font-bold text-sm tracking-widest hover:opacity-80 transition-opacity"
+          className="font-mono font-bold text-sm tracking-widest hover:opacity-80 transition-opacity bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
         >
           anthony.alam
         </a>
@@ -47,18 +48,23 @@ export default function Navbar({ activeSection }) {
               >
                 {label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-3 right-3 h-px bg-accent rounded-full" />
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-gradient-to-r from-accent to-amber-badge"
+                  />
                 )}
               </button>
             )
           })}
-          <a
+          <motion.a
             href="/assets/ANTHONY_M_ALAM_RESUME.pdf"
             download
+            whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(88,166,255,0.4)' }}
+            whileTap={{ scale: 0.97 }}
             className="ml-3 px-3 py-1.5 font-mono text-sm border border-accent text-accent rounded hover:bg-accent/10 transition-colors duration-200"
           >
             Resume ↓
-          </a>
+          </motion.a>
         </nav>
 
         {/* Mobile hamburger */}

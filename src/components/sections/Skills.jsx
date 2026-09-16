@@ -21,7 +21,8 @@ export default function Skills() {
       <div className="flex flex-col gap-10">
         {skillGroups.map((group) => (
           <div key={group.category}>
-            <p className="font-mono text-accent text-xs uppercase tracking-widest mb-4">
+            <p className="flex items-center gap-2 font-mono text-accent text-xs uppercase tracking-widest mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-accent to-amber-badge" />
               {group.category}
             </p>
             <motion.div

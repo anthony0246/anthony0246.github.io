@@ -24,17 +24,32 @@ export default function Hero() {
     >
       <ParticleBackground />
 
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] max-w-[90vw] max-h-[90vw] rounded-full bg-accent/20 blur-[110px] pointer-events-none"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute top-1/3 left-1/4 w-[300px] h-[300px] rounded-full bg-amber-badge/10 blur-[100px] pointer-events-none"
+        aria-hidden="true"
+      />
+
       <motion.div
-        className="relative z-10 max-w-3xl mx-auto px-6 flex flex-col gap-5"
+        className="relative z-10 max-w-3xl mx-auto px-6 flex flex-col gap-5 bg-surface/40 backdrop-blur-md border border-border rounded-2xl px-8 py-12 sm:px-14 sm:py-16 shadow-2xl shadow-black/40"
         variants={container}
         initial="hidden"
         animate="show"
       >
-        <motion.p variants={item} className="font-mono text-muted text-sm">
-          <span className="text-accent">$</span> whoami
-        </motion.p>
+        <motion.span
+          variants={item}
+          className="font-mono text-xs uppercase tracking-widest text-amber-badge border border-amber-badge/30 bg-amber-badge/10 rounded-full px-3 py-1 w-fit"
+        >
+          Software Engineering @ University of Ottawa
+        </motion.span>
 
-        <motion.h1 variants={item} className="font-mono text-3xl sm:text-4xl md:text-6xl font-bold text-primary leading-tight">
+        <motion.h1
+          variants={item}
+          className="font-sans text-4xl sm:text-5xl md:text-7xl font-extrabold leading-[1.35] pb-3 bg-gradient-to-r from-white via-primary to-accent bg-clip-text text-transparent"
+        >
           Anthony Alam
         </motion.h1>
 
@@ -43,23 +58,28 @@ export default function Hero() {
         </motion.div>
 
         <motion.p variants={item} className="font-sans text-muted text-base md:text-lg leading-relaxed max-w-xl">
-          Building backend systems that run on Cisco's global networking infrastructure and 400,000+ Ford vehicles.
+          Building backend systems that run on <span className="text-primary font-semibold">Cisco's</span> global
+          networking infrastructure and <span className="text-primary font-semibold">400,000+ Ford vehicles</span>.
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap gap-4 pt-2">
-          <button
+          <motion.button
             onClick={() => scrollTo('experience')}
-            className="px-5 py-2.5 bg-accent text-background font-mono font-bold text-sm rounded hover:bg-accent/90 transition-colors duration-200"
+            whileHover={{ scale: 1.04, boxShadow: '0 0 32px rgba(88,166,255,0.55)' }}
+            whileTap={{ scale: 0.97 }}
+            className="px-6 py-3 bg-accent text-background font-sans font-bold text-sm rounded-lg shadow-lg shadow-accent/20 transition-colors duration-200"
           >
             View Experience
-          </button>
-          <a
+          </motion.button>
+          <motion.a
             href="/assets/ANTHONY_M_ALAM_RESUME.pdf"
             download
-            className="px-5 py-2.5 border border-accent text-accent font-mono font-bold text-sm rounded hover:bg-accent/10 transition-colors duration-200"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="px-6 py-3 border border-accent text-accent font-sans font-bold text-sm rounded-lg hover:bg-accent/10 transition-colors duration-200"
           >
             Download Resume
-          </a>
+          </motion.a>
         </motion.div>
 
         <motion.div variants={item} className="flex gap-4 pt-2">

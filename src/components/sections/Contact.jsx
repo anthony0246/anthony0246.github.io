@@ -54,7 +54,9 @@ export default function Contact() {
       <SectionHeader label="contact" />
 
       <div className="max-w-xl">
-        <p className="font-mono text-2xl text-accent font-bold mb-2">Open to new opportunities.</p>
+        <p className="font-sans text-3xl sm:text-4xl font-extrabold mb-2 bg-gradient-to-r from-accent to-amber-badge bg-clip-text text-transparent">
+          Open to new opportunities.
+        </p>
         <p className="font-sans text-muted text-sm mb-10 leading-relaxed">
           I'm actively exploring software engineering roles. If my background looks like a fit, reach out. I'm always happy to chat.
         </p>
@@ -67,11 +69,12 @@ export default function Contact() {
               target={link.href.startsWith('mailto') ? undefined : '_blank'}
               rel="noopener noreferrer"
               onClick={link.href.startsWith('mailto') ? handleEmailClick : undefined}
-              className="flex items-center gap-4 px-5 py-4 border border-border rounded-lg bg-surface hover:border-accent group transition-colors duration-200"
+              className="flex items-center gap-4 px-5 py-4 border border-border rounded-xl bg-surface/50 backdrop-blur-sm hover:border-accent group transition-colors duration-200 shadow-lg shadow-black/10"
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
+              whileHover={{ y: -2, boxShadow: '0 0 24px rgba(88,166,255,0.25)' }}
             >
               <span className="text-muted group-hover:text-accent transition-colors duration-200">
                 {link.icon}

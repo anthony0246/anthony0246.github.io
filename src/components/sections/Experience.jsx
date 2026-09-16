@@ -1,95 +1,66 @@
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import SectionHeader from '../ui/SectionHeader'
 import SkillBadge from '../ui/SkillBadge'
 import { experiences } from '../../data/experience'
 
-function FordLogo() {
-  return (
-    <span className="inline-block px-2 py-0.5 bg-surface border border-border rounded font-mono text-xs text-muted">
-      Ford
-    </span>
-  )
-}
-
 export default function Experience() {
-  const [activeId, setActiveId] = useState(experiences[0].id)
-  const active = experiences.find((e) => e.id === activeId)
-
   return (
     <section id="experience" className="max-w-5xl mx-auto px-6 py-16 scroll-mt-14">
       <SectionHeader label="experience" />
 
-      <div className="flex flex-col md:flex-row gap-0 border border-border rounded-lg overflow-hidden">
-        {/* Tab list */}
-        <div className="md:w-52 flex md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-r border-border flex-shrink-0 scrollbar-none">
-          {experiences.map((exp) => (
-            <button
-              key={exp.id}
-              onClick={() => setActiveId(exp.id)}
-              className={`
-                flex items-center gap-2 px-4 py-3 md:py-4 text-left transition-colors duration-150 whitespace-nowrap md:whitespace-normal flex-shrink-0
-                ${activeId === exp.id
-                  ? 'border-b-2 md:border-b-0 md:border-l-2 border-accent bg-surface/60 text-accent'
-                  : 'border-b-2 md:border-b-0 md:border-l-2 border-transparent text-muted hover:bg-surface/40 hover:text-primary'}
-              `}
-            >
-              {exp.logo ? (
-                <img src={exp.logo} alt={exp.company} className="w-5 h-5 object-contain flex-shrink-0" />
-              ) : (
-                <FordLogo />
-              )}
-              <span className="font-mono text-xs">{exp.shortName}</span>
-              {exp.current && (
-                <span className="ml-auto text-xs px-1 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded font-mono">
-                  ↑
-                </span>
-              )}
-            </button>
-          ))}
-        </div>
+      <div className="relative flex flex-col gap-8">
+        <div className="absolute left-5 top-2 bottom-2 w-px bg-gradient-to-b from-accent/60 via-border to-transparent" />
 
-        {/* Detail pane */}
-        <div className="flex-1 p-6 md:p-8 min-h-72">
-          <AnimatePresence mode="wait">
+        {experiences.map((exp, i) => (
+          <motion.div
+            key={exp.id}
+            className="relative pl-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <span
+              className={`absolute left-0 top-5 w-10 h-10 rounded-full bg-surface border flex items-center justify-center ${
+                i === 0 ? 'border-accent/50 shadow-[0_0_16px_rgba(88,166,255,0.35)]' : 'border-border'
+              }`}
+            >
+              <img src={exp.logo} alt={exp.company} className="w-6 h-6 object-contain" />
+            </span>
+
             <motion.div
-              key={activeId}
-              initial={{ opacity: 0, x: 12 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -12 }}
-              transition={{ duration: 0.25 }}
-              className="flex flex-col gap-4 h-full"
+              whileHover={{ y: -3, borderColor: 'rgba(88,166,255,0.4)' }}
+              transition={{ duration: 0.2 }}
+              className="bg-surface/40 backdrop-blur-sm border border-border rounded-xl p-5 sm:p-6 shadow-lg shadow-black/20"
             >
-              <div>
-                <div className="flex flex-wrap items-center gap-2 mb-1">
-                  <h3 className="font-mono text-lg text-primary font-bold">{active.role}</h3>
-                  {active.current && (
-                    <span className="text-xs px-2 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded-full font-mono">
-                      Present
-                    </span>
-                  )}
-                </div>
-                <p className="font-mono text-sm text-accent">{active.company} · {active.duration}</p>
-                <p className="font-mono text-xs text-muted mt-0.5">{active.location}</p>
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <h3 className="font-sans text-lg text-primary font-bold">{exp.role}</h3>
+                {exp.current && (
+                  <span className="text-xs px-2 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded-full font-mono">
+                    Present
+                  </span>
+                )}
               </div>
+              <p className="font-sans text-sm text-accent font-medium">{exp.company} · {exp.duration}</p>
+              <p className="font-sans text-xs text-muted mt-0.5">{exp.location}</p>
 
-              <ul className="flex flex-col gap-2.5 flex-1">
-                {active.bullets.map((bullet, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-muted font-sans leading-relaxed">
+              <ul className="flex flex-col gap-2.5 mt-4">
+                {exp.bullets.map((bullet, j) => (
+                  <li key={j} className="flex gap-3 text-sm text-muted font-sans leading-relaxed">
                     <span className="text-accent font-bold mt-0.5 flex-shrink-0">▹</span>
                     <span>{bullet}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 pt-3 border-t border-border">
-                {active.tags.map((tag) => (
+              <div className="flex flex-wrap gap-2 mt-4">
+                {exp.tags.map((tag) => (
                   <SkillBadge key={tag} label={tag} small />
                 ))}
               </div>
             </motion.div>
-          </AnimatePresence>
-        </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   )

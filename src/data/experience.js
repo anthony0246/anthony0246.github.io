@@ -1,6 +1,6 @@
 export const experiences = [
   {
-    id: 'cisco-incoming',
+    id: 'cisco-telemetry',
     company: 'Cisco Systems',
     shortName: 'Cisco — Telemetry & Programmability',
     role: 'Software Engineer Intern — Telemetry & Programmability',
