@@ -17,7 +17,7 @@ export const projects = [
     title: 'PlayItAgain: Kolonie',
     subtitle: 'Catan Game Save · iOS App',
     description:
-      'A shipped iOS app that digitizes physical Catan boards and game state from a single photo, letting players save and resume games anytime. Engineered a Core Image perspective-correction pipeline and an on-device YOLOv8 + Core ML detector, achieving 98% board detection accuracy.',
+      'A shipped production iOS app in Swift/SwiftUI that digitizes physical Catan boards and game state from a single photo, letting players save and resume games anytime, surpassing 100+ downloads on the App Store. Engineered a Core Image perspective-correction pipeline and an on-device YOLOv8 + Core ML detector, achieving 98% board detection accuracy and sustaining 20 daily active users.',
     tags: ['Swift', 'SwiftUI', 'YOLOv8', 'Core ML', 'Core Image', 'Computer Vision'],
     badge: null,
     links: {
